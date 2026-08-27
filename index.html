@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Career Hub - Modern IT job portal with 40+ IT roles, job search, resume applications and recruiter features.">
+  <title>Career Hub | Find Your Next Opportunity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="toast" class="toast" role="status"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Career Hub Home">
+        <span class="brand-mark">C</span>
+        <span>Career<span>Hub</span></span>
+      </a>
+      <nav id="mainNav" class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#jobs">Jobs</a>
+        <a href="#companies">Companies</a>
+        <a href="#applications">My Applications</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-ghost" id="savedBtn">Saved <span id="savedCount">0</span></button>
+        <button class="btn btn-primary" id="loginBtn">Login</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">YOUR NEXT CAREER STARTS HERE</span>
+          <h1>Find the right <span>IT job</span> for your future.</h1>
+          <p class="hero-copy">Discover opportunities across software, design, data, cybersecurity, cloud, AI and digital careers.</p>
+          <form id="heroSearch" class="search-card">
+            <div class="search-field">
+              <label for="heroKeyword">What are you looking for?</label>
+              <input id="heroKeyword" placeholder="Job title, skill or keyword">
+            </div>
+            <div class="search-field">
+              <label for="heroLocation">Location</label>
+              <input id="heroLocation" placeholder="City or Remote">
+            </div>
+            <button class="btn btn-primary search-btn" type="submit">Search Jobs</button>
+          </form>
+          <div class="quick-links">
+            <span>Popular:</span>
+            <button data-quick="Software Developer">Software Developer</button>
+            <button data-quick="Data Analyst">Data Analyst</button>
+            <button data-quick="UI/UX Designer">UI/UX Designer</button>
+            <button data-quick="Cybersecurity">Cybersecurity</button>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="floating-card top"><strong>40+</strong><span>IT roles</span></div>
+          <div class="hero-orbit"><div class="orbit-dot">💼</div><div class="orbit-dot">⚡</div><div class="orbit-dot">🚀</div></div>
+          <div class="hero-stat"><strong>Career Hub</strong><span>Search • Apply • Grow</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="container stats">
+        <div><strong>40+</strong><span>IT Job Roles</span></div>
+        <div><strong>12</strong><span>Career Categories</span></div>
+        <div><strong>100%</strong><span>Responsive Design</span></div>
+        <div><strong>24/7</strong><span>Job Discovery</span></div>
+      </div>
+    </section>
+
+    <section id="jobs" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">EXPLORE OPPORTUNITIES</span><h2>Latest IT Jobs</h2></div>
+          <span id="resultCount" class="result-count"></span>
+        </div>
+        <div class="filters">
+          <input id="jobSearch" placeholder="🔎 Search jobs, skills or companies">
+          <select id="categoryFilter"><option value="">All Categories</option></select>
+          <select id="locationFilter"><option value="">All Locations</option></select>
+          <select id="typeFilter"><option value="">All Job Types</option><option>Full-time</option><option>Part-time</option><option>Internship</option><option>Contract</option></select>
+        </div>
+        <div id="jobGrid" class="job-grid"></div>
+        <div id="emptyState" class="empty hidden">
+          <div>🔍</div><h3>No jobs found</h3><p>Try another keyword, category or location.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="companies" class="section alt">
+      <div class="container">
+        <div class="section-heading"><div><span class="eyebrow">CAREER NETWORK</span><h2>Popular Companies</h2></div></div>
+        <div id="companyGrid" class="company-grid"></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div><span class="eyebrow">READY FOR THE NEXT STEP?</span><h2>Build your career with confidence.</h2><p>Create your profile, upload your resume and apply to the right opportunities.</p></div>
+        <button class="btn btn-light" id="ctaLogin">Create Free Profile →</button>
+      </div>
+    </section>
+
+    <section id="applications" class="section">
+      <div class="container">
+        <div class="section-heading"><div><span class="eyebrow">YOUR CAREER ACTIVITY</span><h2>My Applications</h2></div></div>
+        <div id="applicationsList" class="applications-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="brand" href="#home"><span class="brand-mark">C</span><span>Career<span>Hub</span></span></a><p>Connecting talent with opportunity.</p></div>
+      <div><h4>For Job Seekers</h4><a href="#jobs">Find Jobs</a><a href="#applications">My Applications</a><a href="#" id="footerProfile">My Profile</a></div>
+      <div><h4>For Recruiters</h4><a href="#" id="recruiterBtn">Recruiter Dashboard</a><a href="mailto:guhanvikas@gmail.com">Contact Support</a></div>
+      <div><h4>Developed By</h4><p><strong>D. Guhan</strong></p><p>guhanvikas@gmail.com</p><p>+91 70107 97593</p></div>
+    </div>
+    <div class="container copyright">© 2026 Career Hub. All rights reserved.</div>
+  </footer>
+
+  <div id="modalRoot"></div>
+  <script src="app.js"></script>
+</body>
+</html>
